@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table 복습</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        table{
+            width: 1280px;
+            margin: 0 auto;
+            border: solid 1px #000;
+            border-collapse: collapse;
+        }
+        table caption{
+            font-weight: bold;
+            font-size: large;
+            margin: 80px 0;
+        }
+        table thead{}
+        table thead tr{}
+        table thead tr th{
+            border: solid 1px #000;
+        }
+        table tbody{}
+        table tbody tr td{
+            border: solid 1px #000;
+        }
+        table tfoot{
+            height: 500px;
+            text-align: center;
+        }
+        table tfoot tr{}
+        table tfoot tr td{
+            border: solid 1px #000;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>테이블 태그 샘플태그입니다. 제목을 의미</caption>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>타이틀이 담기는 태그</th>
+                <th>두껍고, 가운데 정렬이 기본 값</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>데이터가 담겨지는 태그</td>
+                <td rowspan="2">아래의 td 태그와 병합</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>윗층에서 하나를 가져가는 바람에 여기는 td가 두개뿐</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <em>정상화 된 tr층</em>
+                </td>
+                <td>
+                    <b>3개의 칸으로 정상화 되었음</b>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">
+                    옆으로 td 3개를 모두 병합<br>
+                    수직, 수평정렬 너비, 높이 옵션을 스스로 가지고 있음. 속성이 무시되는 상황이 발생하기도 함<br>
+                    tr(층) 높이가 10이고, td 높이가 50이면 자식태그의 옵션을 준수하고, 부모태그의 옵션 스타일 무시함.
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
