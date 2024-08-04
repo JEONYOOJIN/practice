@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <form id="join" action="join-s.html">
+        <fieldset>
+            <legend>회원가입 후 이용 가능한 서비스입니다</legend>
+            <p>
+                <span class="form-title">이름: </span>
+                <input type="text" name="name" placeholder="이름을 작성해 주세요." required autofocus>
+            </p>
+            <p>
+                <span class="form-title">아이디: </span>
+                <input type="text" name="ID" placeholder="영문 및 숫자만 가능" required>
+            </p>
+            <p>
+                <span class="form-title">비밀번호: </span>
+                <input type="password" name="PW" placeholder="영문 및 숫자만 가능" required>
+            </p>
+            <p>
+                <span class="form-title">성별: </span>
+                <input type="radio" id="man" value="man" name="gender">
+                <label for="man">남자</label>
+                <input type="radio" id="woman" value="woman" name="gender">
+                <label for="woman">여자</label>
+                <input type="radio" id="nocomment" value="nocomment" name="gender">
+                <label for="nocomment">말하고싶지않음</label>
+            </p>
+            <p>
+                <span class="form-title">가장 알고 싶은것은?: </span>
+                <input type="checkbox" id="01" value="01" name="check-best">
+                <label for="01">전유진 이용법</label>
+                <input type="checkbox" id="02" value="02" name="check-best">
+                <label for="02">전유진이랑 놀기</label>
+                <input type="checkbox" id="03" value="03" name="check-best">
+                <label for="03">머리속</label>
+            </p>
+            <p>
+                <span class="form-title">사진: </span>
+                <input type="file" name="file">
+            </p>
+            <p>
+                <span class="form-title">선호하는 컬러: </span>
+                <input type="color" name="color">
+                <input type="color" name="color">
+                <input type="color" name="color">
+            </p>
+            <p>
+                <span class="form-title">사는 곳: </span>
+                <select name="city">
+                    <optgroup label="서울시">
+                        <option value="f">강남구</option>
+                        <option value="f">서초구</option>
+                        <option value="f">중구</option>
+                    </optgroup>
+                    <optgroup label="경기도">
+                        <option value="f">안양시</option>
+                        <option value="f">시흥시</option>
+                        <option value="f">안성시</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <span class="form-title">원하는 데이트 날을 선택해주세요: </span>
+                <input type="date" name="date" min="2024-01-01" max="2024-12-31" step="1">
+            </p>
+            <p>
+                <span class="form-title">나이: </span>
+                <input type="number" name="age" min="10" max="100" step="10" placeholder="10">
+            </p>
+            <p>
+                <span class="form-title">하고싶은말: </span>
+                <textarea placeholder="하고싶은 말을 적어주세요" rows="6" cols="30"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="회원가입" onclick="suc()">
+                <input type="reset" name="reset" value="다시작성하기">
+            </p>
+        </fieldset>
+    </form>
+    <script>
+        function suc(){
+            prompt('누구를 통해 알게 되었나요?')
+            confirm('정말 가입할건가요?')
+            alert('가입되었어요ㅎㅎ')
+        }
+    </script>
+</body>
+</html>

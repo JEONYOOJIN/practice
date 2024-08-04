@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+#header{
+    background-color: #333;
+}
+#header .container{
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#header .container h1{}
+#header .container h1 a{
+    color: #fff;
+    display: block;
+    line-height: 100px;
+    padding: 0 10px;
+}
+#header .container nav{
+
+}
+#header .depth-01{
+    display: flex;
+    justify-content: space-between;
+}
+#header .depth-01 > li{
+    position: relative;
+}
+#header .depth-01 > li > a{
+    color: #fff;
+    display: block;
+    line-height: 100px;
+    padding: 0 50px;
+    transition: all 0.4s ease-in-out;
+}
+#header .depth-02{
+    text-align: center;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+#header .depth-02 li{}
+#header .depth-02 li a{
+    background-color: #333;
+    color: #fff;
+    display: block;
+    line-height: 80px;
+    border-bottom: solid 1px #fff;
+    transition: all 0.4s ease-in-out;
+}
+#header .depth-02 li:last-child a{
+    border-bottom: 0;
+}
+#header .depth-01 > li:hover > a,
+#header .depth-02 li:hover a{
+    background-color: #ffffff;
+    color: #333;
+}
+#header .depth-01:hover .depth-02{
+    height: 323px;
+}
+#header .fake{
+    background-color: #333;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+    z-index: 1;
+}
+#header .container nav:hover + .fake{
+    height: 323px;
+}
+/* 상단메뉴 끝 */
+.content{}
+.content .container{
+    width: 1280px;
+    margin: 0 auto;
+}
+.content .main-banner{
+    height: 800px;
+    background: radial-gradient(transparent, #fff), url(../img/img-01.jpg) no-repeat center;
+    background-size: cover;
+}
