@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul,ol,dl{
+    list-style: none;
+}
+#container{
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    height: 300vh;
+}
+#top-popup{
+    background-color: #f00;
+}
+#top-popup a{
+    line-height: 4;
+    color: #fff;
+    font-size: 2em;
+}
+#header{
+    width: 100%;
+    background-color: blueviolet;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; /*가로정렬*/
+    align-items: center; /*세로정렬*/
+}
+#header p{
+    line-height: 2;
+    font-size: 2em;
+}
+#header div{
+    width: 20px;
+    height: 20px;
+    background-color: #fff000;
+    transition: all 0.4s ease-in-out;
+}
+#header p:hover +div{
+    transform: translateX(200px) rotate(2000deg);
+}
+.top-btn{
+    display: block;
+    color: #fff;
+    background-color: #333;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    text-align: center;
+    line-height: 100px;
+}
